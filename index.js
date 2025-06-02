@@ -15,7 +15,7 @@ form.addEventListener('submit', function(e){
     const consent    = document.getElementById("consent").value.trim();
 
     let isValid = true;
-    
+
     if(firstName === ""){
         document.getElementById('name-error').textContent = 'Name is required';
         document.getElementById('name-error').style.display = 'block';
@@ -58,3 +58,31 @@ form.addEventListener('submit', function(e){
   }
    
 });
+
+
+
+// custom animated cursor
+// modal practice
+
+const modalBtn = document.getElementById("my-btn");
+const myModal  = document.getElementById("my-modal");
+const closeBtn = document.getElementById("closeModal");
+
+modalBtn.addEventListener('click',()=>{
+
+    myModal.style.display="block";
+    
+    
+});
+
+closeBtn.addEventListener('click',()=>{
+   myModal.style.display="none";
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === myModal ) {
+    myModal.style.display = 'none';
+  }
+});
+
+  
