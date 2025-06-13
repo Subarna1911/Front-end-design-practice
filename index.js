@@ -85,4 +85,20 @@ window.addEventListener('click', (e) => {
   }
 });
 
-  
+
+
+
+window.addEventListener("load", function(){
+
+  if(!localStorage.getItem("modalShown")){
+     setTimeout(() => {
+        document.getElementById("customModal").style.display = "flex";
+
+        localStorage.setItem("modalShown", "true");
+      }, 5000);
+  }
+
+document.getElementById("closeBtn").addEventListener("click", function(){
+  document.getElementById("customModal").style.display="none";
+});
+});
